@@ -15,7 +15,18 @@ namespace SQLFormatter
             //var result = CommandLine.Parser.Default.ParseArguments<Options>(args);
             Options CommandArgs = new Options();
 
-            if (!Parser.Default.ParseArguments(args, CommandArgs))
+            bool isError = false;
+            Parser.Default.ParseArguments<Options>(args)
+                    .WithNotParsed<Options>(errorObj =>
+                    {
+                        isError = true;
+                    })
+                    .WithParsed<Options>(optionObj =>
+                    {
+                        CommandArgs = optionObj;
+                    });
+
+            if (isError)
             {
                 Console.WriteLine("Error: Please check SQL formatter settings.");
                 return;
