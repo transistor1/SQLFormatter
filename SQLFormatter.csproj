@@ -45,7 +45,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\build\plugins\</OutputPath>
+    <OutputPath>..\..\build\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -180,10 +180,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommandLine, Version=2.2.1.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineParser.2.2.1\lib\net45\CommandLine.dll</HintPath>
+      <HintPath>..\..\packages\CommandLineParser.2.2.1\lib\net45\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="PoorMansTSqlFormatterLib40">
-      <HintPath>..\packages\FieldEffect.PoorMansTSqlFormatter.1.5.1.1\lib\net40\PoorMansTSqlFormatterLib40.dll</HintPath>
+      <HintPath>..\..\packages\FieldEffect.PoorMansTSqlFormatter.1.5.1.1\lib\net40\PoorMansTSqlFormatterLib40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
